@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import { AiFillStar, AiOutlineStar } from 'react-icons/ai'
-import { FaPlus, FaCheck, FaEye } from 'react-icons/fa'
+import { FaPlus, FaCheck } from 'react-icons/fa'
 import { UserAuth } from '../context/AuthContext'
 import { db } from '../firebase'
 import {arrayUnion, doc, updateDoc} from 'firebase/firestore'
@@ -47,9 +47,7 @@ const Movie = (props) => {
                             </button>
                         )}
                         
-                        <button className='bg-black/60 text-center items-center inline-flex rounded-full px-4 py-1 text-base border border-white hover:scale-110 ml-2'>
-                            <FaEye className='mr-2'/> Trailer
-                        </button>
+                        
                     </div>
                 </div>
                 <p onClick={saveShow}>

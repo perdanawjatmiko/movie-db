@@ -23,21 +23,21 @@ const ResultSearch = (props) => {
     console.log(result)
 
     const slideLeft = () => {
-        var slider = document.getElementById('slider' + props.sliderID);
+        var slider = document.getElementById('searchSlider');
         slider.scrollLeft = slider.scrollLeft - 800;
     }
 
     const slideRight = () => {
-        var slider = document.getElementById('slider' + props.sliderID);
+        var slider = document.getElementById('searchSlider');
         slider.scrollLeft = slider.scrollLeft + 800;
     }
 
   return (
     <div>
-        <h2 className='text-white font-semibold md:text-xl p-4'>{props.search}</h2>
+        <h2 className='text-white font-semibold md:text-xl p-4'>you can slide result for more</h2>
         <div className='relative flex items-center group'>
             <FaChevronLeft onClick={slideLeft} className='bg-white left-0 rounded-full absolute opacity-40 hover:opacity-80 cursor-pointer z-10 hidden p-2 group-hover:block' size={35}/>
-            <div id={'savedSlider'} className='w-full h-full overflow-x-scroll whitespace-nowrap scroll-smooth scrollbar-hide relative'>
+            <div id={'searchSlider'} className='w-full h-full overflow-x-scroll whitespace-nowrap scroll-smooth scrollbar-hide relative'>
                 {result.map((item, id) => (
                     <Movie key={id} item={item}/>
                 ))}

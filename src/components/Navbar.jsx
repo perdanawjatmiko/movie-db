@@ -14,8 +14,12 @@ const Navbar = () => {
   }
 
   const handleSubmit = (e) => {
+    if(nav) {
+      setNav(!nav)
+    } else {
+      setNav(nav)
+    }
     e.preventDefault();
-    console.log(submited)
     navigate('/search', {state:{search:submited}});
   }
 
@@ -40,7 +44,7 @@ const Navbar = () => {
 
       <form onSubmit={handleSubmit} className='w-[50%] lg:w-full max-w-sm lg:ml-[20%]'>
         <div className='hidden lg:flex items-center border-b border-white py-2'>
-          <input onChange={handleChange} type="text" className='appearance-none bg-transparent border-none w-full text-white mr-3 py-1 px-2 leading-tight focus:outline-none ' placeholder='Search Movie..'/>
+          <input onChange={handleChange} type="text" className='appearance-none bg-transparent border-none w-full text-white mr-3 py-1 px-2 leading-tight focus:outline-none' placeholder='Search Movie..'/>
           <button className='flex-shrink-0 rounded-full text-base text-white py-1 px-2 bg-transparent hover:scale-110 duration-300 '><FaSearch/> </button>
         </div>
       </form>
@@ -68,9 +72,9 @@ const Navbar = () => {
 
       {/* Sidebar */}
       <div className={nav ? 'fixed flex flex-col justify-center items-center top-0 left-0 h-screen w-full lg:hidden bg-black/90 duration-500' : 'fixed flex flex-col justify-center items-center top-0 -left-full h-screen w-[20%] bg-black/90 duration-500'}>
-      <form className='w-[90%] max-w-sm mb-4'>
+      <form onSubmit={handleSubmit} className='w-[90%] max-w-sm mb-4'>
         <div className='flex items-center border border-white py-2 px-4 rounded-full'>
-          <input type="text" className='bg-transparent border-none w-full text-white mr-3 py-1 px-2 leading-tight focus:outline-none ' placeholder='Search Movie..'/>
+          <input onChange={handleChange} type="text" className='bg-transparent border-none w-full text-white mr-3 py-1 px-2 leading-tight focus:outline-none ' placeholder='Search Movie..'/>
           <button className='flex justify-between items-center rounded-full text-base text-white p-2 bg-red-600'><FaSearch className='mx-2'/></button>
         </div>
       </form>

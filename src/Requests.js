@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const apiKey = '38c6c941973ddf6d48ec6164c009c114'
+const apiKey = '' //You should create your own API key on https://www.themoviedb.org/ by creating an account.
 const baseUrl = 'https://api.themoviedb.org/3'
 const language = 'id-ID'
 const region = 'ID'

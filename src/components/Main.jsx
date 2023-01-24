@@ -22,6 +22,10 @@ const Main = () => {
         }
     }
 
+    const handleOnClick = () => {
+        return alert('Sorry this button is not functionable yet, but you can save a movie by Click save on movie poster below')
+    }
+
   return (
     <div className='w-full h-[750px] text-white'>
         <div className='w-full h-full'>
@@ -33,8 +37,8 @@ const Main = () => {
                     <p className='text-black text-lg p-2 font-bold ml-2 border border-black bg-yellow-300'>{movie?.vote_average}</p>
                 </div>
                 <div className='my-8'>
-                    <button className='border rounded bg-red-600 text-white border-red-600 py-2 px-5'>Save Movie</button>
-                    <button className='border rounded text-white border-gray-300 py-2 px-5 ml-4'>Watch Trailer</button>
+                    <button className='border rounded bg-red-600 text-white border-red-600 py-2 px-5' onClick={handleOnClick}>Save Movie</button>
+                    <button className='border rounded text-white border-gray-300 py-2 px-5 ml-4' onClick={handleOnClick}>Watch Trailer</button>
                 </div>
                 <p className='text-gray-400'>Released : {movie?.release_date}</p>
                 
