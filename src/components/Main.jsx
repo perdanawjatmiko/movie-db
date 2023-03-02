@@ -40,9 +40,9 @@ const Main = () => {
                     <button className='border rounded bg-red-600 text-white border-red-600 py-2 px-5' onClick={handleOnClick}>Save Movie</button>
                     <button className='border rounded text-white border-gray-300 py-2 px-5 ml-4' onClick={handleOnClick}>Watch Trailer</button>
                 </div>
-                <p className='text-gray-400'>Released : {movie?.release_date}</p>
+                <p className='text-gray-400 text-lg'>Released : {movie?.release_date}</p>
                 
-                <p className='w-full md:max-w-[70%] lg:max-w-[50%] xl:max-w-[35%] text-gray-300'>
+                <p className='w-full md:max-w-[70%] lg:max-w-[50%] xl:max-w-[35%] text-gray-300 mt-4'>
                     {truncateText(movie?.overview, 150)}
                 </p>
             </div>

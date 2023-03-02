@@ -1,11 +1,12 @@
 import axios from "axios";
 
-const apiKey = '' //You should create your own API key on https://www.themoviedb.org/ by creating an account.
+const apiKey = '38c6c941973ddf6d48ec6164c009c114' //You should create your own API key on https://www.themoviedb.org/ by creating an account.
 const baseUrl = 'https://api.themoviedb.org/3'
 const language = 'id-ID'
 const region = 'ID'
 
 const requests = {
+    requestTrending: `${baseUrl}/trending/movie/week?api_key=${apiKey}&language=${language}&page=1&region=${region}`,
     requestNowPlaying: `${baseUrl}/movie/now_playing?api_key=${apiKey}&language=${language}&page=1&region=${region}`,
     requestPopular: `${baseUrl}/movie/popular?api_key=${apiKey}&language=${language}&page=1&region=${region}`,
     requestTopRated: `${baseUrl}/movie/top_rated?api_key=${apiKey}&language=${language}&page=1&region=${region}`,

@@ -25,5 +25,4 @@ yarn-error.log*
 .env
 .firebaserc
 firebase.json
-/src/Requests.js
 src/Requests.js
